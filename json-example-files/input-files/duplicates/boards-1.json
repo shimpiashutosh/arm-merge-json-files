@@ -1,0 +1,59 @@
+{
+  "boards": [
+    {
+      "name": "B7-400X",
+      "vendor": "Boards R Us",
+      "core": "Cortex-Z1",
+      "has_wifi": true
+    },
+    {
+      "name": "B7-400X",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-M7",
+      "has_wifi": true
+    },
+    {
+      "name": "Low_Power",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-M0+",
+      "has_wifi": false
+    },
+    {
+      "name": "B7-400X",
+      "vendor": "Boards R Us",
+      "core": "Cortex-V4",
+      "has_wifi": true
+    },
+    {
+      "name": "Low_Power",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-M5+",
+      "has_wifi": false
+    },
+    {
+      "name": "B7-500X",
+      "vendor": "Boards R Us",
+      "core": "Cortex-M7",
+      "has_wifi": true
+    },
+    {
+      "name": "High_Power",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-M0+",
+      "has_wifi": false
+    },
+    {
+      "name": "B4-500X",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-M7",
+      "has_wifi": true
+    },
+    {
+      "name": "Medium_Power",
+      "vendor": "Alpha",
+      "core": "Cortex-M0+",
+      "has_wifi": false
+    }
+  ]
+}
+

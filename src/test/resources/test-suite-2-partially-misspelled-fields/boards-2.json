@@ -1,0 +1,22 @@
+{
+  "boards": [
+    {
+      "na": "D4-200S",
+      "vendor": "Boards R Us",
+      "core": "Cortex-M4",
+      "has_wifi": false
+    },
+    {
+      "na": "D5-200S",
+      "vendor": "Boards R Us",
+      "core": "Cortex-V4",
+      "has_wifi": false
+    },
+    {
+      "name": "D6-200S",
+      "vendor": "Tech Corp.",
+      "core": "Cortex-B4",
+      "has_wifi": false
+    }
+  ]
+}
