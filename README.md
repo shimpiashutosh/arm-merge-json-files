@@ -15,7 +15,11 @@ Before you can build and run this project, ensure that the following tools/softw
     - [Download JDK from Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or [OpenJDK](https://openjdk.java.net/).
     - Set `JAVA_HOME` environment variable to java installation path. You can check whether it has already been set. 
       ```
+      # Unix system
       echo $JAVA_HOME
+      
+      # Windows system
+      echo %JAVA_HOME%
       ```
       if it is empty, then follow below steps according to your system. This is shell/commandline local variable.
       ```
