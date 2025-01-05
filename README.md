@@ -108,45 +108,69 @@ After building the project, you can run the tool in the following ways:
 
 The application accepts command-line arguments, including the input folder path & output file path.
 
+**Note**: Please move/remove the combined JSON output file from the input/source directory in case output file is not provided or its location is same as input directory, otherwise file will be included in the final result.
+
 ```
 unix system absolute path looks like => /Users/ashutosh/projects/arm-merge-json-files/json-example-files/output-file/combined-json-file-small-data.json
 windows system absolute path looks like => C:/Users/ashutosh/Desktop/arm-merge-json-files/json-example-files/output-file/combined-json-file-small-data.json
 ```
 
-Example:
+#### Example:
    ```bash
-   java -jar target/arm-merge-json-files-cli-<version>.jar --source-path=/folder/path/to/json/files --output-path=/path/to/output.json
+   java -jar target/arm-merge-json-files-<version>.jar --source-path=/folder/path/to/json/files --output-path=/path/to/output.json
    ```
    OR
    ```bash
-   # --output-path is optional. If not provided then uutput file will be generated inside source-path with prefix 'combined-json-file-' followed by random UUID.
-   java -jar target/arm-merge-json-files-cli-<version>.jar --source-path=/folder/path/to/json/files
+   # --output-path is optional. If not provided then output file will be generated inside source-path with prefix 'combined-json-file-' followed by random UUID.
+   java -jar target/arm-merge-json-files-<version>.jar --source-path=/folder/path/to/json/files
    ```
 
 Replace `<version>` with latest built jar version e.g. `1.0.0`, `--source-path` with the folder path to your input JSON files and `--output-path` with the desired output file path for the combined output.
 
+#### JVM settings [Just for a reference, add if you really need it]
+Programs runs on low memory for large files.
+
+Explicit Heap memory – Xms and Xmx options
+
+One of the most common performance-related practices is to initialize the heap memory as per the application requirements.
+
+That’s why we should specify minimal and maximal heap size. We can use the below parameters to achieve this:
+
+```
+# We can mark units as ‘g’ for GB, ‘m’ for MB, and ‘k’ for KB
+-Xms<heap size>[unit] 
+-Xmx<heap size>[unit]
+```
+
+Example:
+```
+java -Xms128m -jar target/arm-merge-json-files-<version>.jar --source-path=/folder/path/to/json/files
+java -Xmx256m -jar target/arm-merge-json-files-<version>.jar --source-path=/folder/path/to/json/files
+java -Xms128m -Xmx256m -jar target/arm-merge-json-files-<version>.jar --source-path=/folder/path/to/json/files
+```
+
 ### **Run CLI application on example files provided inside 'json-example-files'**
 ```bash
    # Small set of records, generates combined json records file inside source directory
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/small
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/small
    ```
 ```bash
    # Small set of records, generates combined json records file & saves to desired output file
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/small --output-file-path=json-example-files/output-file/combined-json-file-small-data.json
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/small --output-file-path=json-example-files/output-file/combined-json-file-small-data.json
    ```
 ```bash
    # Large set of records, generates combined json records file inside source directory
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/large
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/large
    ```
 ```bash
    # Large set of records, generates combined json records file & saves to desired output file
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/large --output-file-path=json-example-files/output-file/combined-json-file-large-data.json
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/large --output-file-path=json-example-files/output-file/combined-json-file-large-data.json
    ```
 ```bash
    # Duplicate set of records, generates combined json records file inside source directory
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/duplicates
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/duplicates
    ```
 ```bash
    # Duplicate set of records, generates combined json records file & saves to desired output file
-   java -jar target/arm-merge-json-files-cli-1.0.0.jar --source-path=json-example-files/input-files/duplicates --output-file-path=json-example-files/output-file/combined-json-file-skipped-duplicate-records.json
+   java -jar target/arm-merge-json-files-1.0.0.jar --source-path=json-example-files/input-files/duplicates --output-file-path=json-example-files/output-file/combined-json-file-skipped-duplicate-records.json
    ```

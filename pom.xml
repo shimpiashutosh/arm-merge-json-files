@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.arm.cli</groupId>
-    <artifactId>arm-merge-json-files-cli</artifactId>
+    <artifactId>arm-merge-json-files</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Merge multiple JSON files into a single JSON file CLI application</name>
