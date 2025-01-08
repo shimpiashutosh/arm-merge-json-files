@@ -1,0 +1,17 @@
+{
+  "boards" : [ {
+    "name" : "D6-200S",
+    "vendor" : "Tech Corp.",
+    "core" : "Cortex-B4",
+    "has_wifi" : false
+  }, {
+    "name" : "Low_Power",
+    "vendor" : "Tech Corp.",
+    "core" : "Cortex-M0+",
+    "has_wifi" : false
+  } ],
+  "_metadata" : {
+    "total_vendors" : 1,
+    "total_boards" : 2
+  }
+}
